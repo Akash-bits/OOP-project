@@ -12,30 +12,53 @@
 	</script>
 
 	<script>
-	$(document).ready(function()
+	function display()
 	{
-		var beachSet=[["Calangute Beach","./beaches/calangute.jpg"],["Baga Beach","./beaches/baga.jpeg"],["Candolim Beach","./beaches/candolim.jpeg"],["Palolem Beach","./beaches/palolem.jpg"]];
-		var resortSet=[["./resorts/novotel.jpg"],["./resorts/W-Goa.jpg"],["./resorts/resort-rio.jpg"],["./resorts/the-baga-beach-resort.jpg"]];
-		var churchSet=[["./churches/Se-Cathedral.jpg"],["./churches/São-Pedro-Church.jpg"],["./churches/Churches-and-convents-of-Goa.jpg"]];
+		// document.getElementById("beaches-set").innerHTML+="<p>hello</p>";
+		var beachSet=[
+		["Calangute Beach","./beaches/calangute.jpg","Big, popular beach with water sports, such as boating, water skiing & parasailing, plus food stalls"],
+		["Baga Beach","./beaches/baga.jpeg","recreation area with water sports, eateries, bars, nightspots & a festive atmosphere"],
+		["Candolim Beach","./beaches/candolim.jpeg","Candolim beach is sandy beach with enough place to enjoy rest. Not so crowded like the Baga n Calangute"],
+		["Palolem Beach","./beaches/palolem.jpg","A beach lover’s paradise, and voted in the top 25 beaches of India "]];
 
-		for(int i=0;i<beachSet.length;i++)
+		var resortSet=[["Novotel Goa","./resorts/novotel.jpg","Set in a Balinese-style garden.There's an airy international restaurant and a Mediterranean eatery."],
+		["W-Goa","./resorts/W-Goa.jpg","In tropical gardens near a beach."],
+		["Resort-Rio","./resorts/resort-rio.jpg","Set along the Baga River and surrounded by tropical vegetation.Elegant restaurants, including Italian and vegetarian options. "],
+		["The Baga Beach Resort","./resorts/the-baga-beach-resort.jpg","There's an open-air restaurant, a bar and an outdoor pool. The funky grounds have hammocks and sculptural wood objects."]];
+
+		var churchSet=[["Se Cathedral Church" ,"./churches/Se-Cathedral.jpg","The Se Cathedral's tower houses a large bell known as the Golden Bell on account of its rich tone. It is said to be the largest in Goa, and one of the best in the world"],
+		["São Pedro Church ", "./churches/São-Pedro-Church.jpg","Not as monumental as some of the other churches in Goa, the Sao Pedro (Saint Peter's) Church is a quiet, unassuming little chapel"],
+		["Churches and convents of Goa","./churches/Churches-and-convents-of-Goa.jpg","Located in Goa Velha, in the state of Goa, India, it was declared a World Heritage Site in 1986."]];
+
+		for(var i=0;i<beachSet.length;i++)
 		{
-			var txt= '<div class="media"><img class="d-flex mr-3 img-thumbnail align-self-center" src='+beachSet[i][1]+'><div class="media-body"><h2 class="mt-0">'+beachSet[i][1]+'</h2><h4>Popular For</h4> <p class="d-none d-sm-block"></p></div></div>';
-			document.getElementById("beaches-set").innerHtml+=txt;
+			var txt= '<div class="media "><img class="col-4 d-flex mr-3 img-thumbnail align-self-center img-fluid" src='+beachSet[i][1]+'><div class="media-body"><h2 class="mt-0">'+beachSet[i][0]+'</h2><h4>Popular For: '+beachSet[i][2] +'</h4> <p class="d-none d-sm-block"></p></div></div>';
+			document.getElementById("beaches-set").innerHTML+=txt;
 		}
+		for(var i=0;i<resortSet.length;i++)
+		{
+			var txt= '<div class="media "><img class="col-4 d-flex mr-3 img-thumbnail align-self-center img-fluid" src='+resortSet[i][1]+'><div class="media-body"><h2 class="mt-0">'+resortSet[i][0]+'</h2><h4>Popular For: '+resortSet[i][2] +'</h4> <p class="d-none d-sm-block"></p></div></div>';
+			document.getElementById("resorts-set").innerHTML+=txt;
+		}
+		for(var i=0;i<churchSet.length;i++)
+		{
+			var txt= '<div class="media "><img class="col-4 d-flex mr-3 img-thumbnail align-self-center img-fluid" src='+churchSet[i][1]+'><div class="media-body"><h2 class="mt-0">'+churchSet[i][0]+'</h2><h4>Popular For: '+churchSet[i][2] +'</h4> <p class="d-none d-sm-block"></p></div></div>';
+			document.getElementById("churches-set").innerHTML+=txt;
+		}
+
 	}
 
 	</script>
 
-	<style>
-		a {
+	<!-- <style>
+		.text-light {
 			color: white;
 		}
-	</style> 
+	</style>  -->
 
 
 </head>
-<body>
+<body onload="display()">
 
 <div class="container bg-dark" style="z-index: 0;">
 	<nav class="navbar navbar-expand-sm fixed-top bg-dark">
@@ -43,10 +66,10 @@
 	<a class="navbar-brand text-light" href="index.html"><span style="font-size:1.8em; ">Project title</span></a>
 	<div class="collapse navbar-collapse"  id="header">
 	<ul class="navbar-nav ml-auto list-unstyled">
-		<li class="navbar-item text-light"><a class="nav-link " style="font-size:1.2em;" href="index.html">Home</a></li>
-		<li class="navbar-item text-light"><a class="nav-link " style="font-size:1.2em;" href="">Login</a></li>
-		<li class="navbar-item text-light"><a class="nav-link " style="font-size:1.2em;" href="">Travel</a></li>
-		<li class="navbar-item text-light"><a class="nav-link " style="font-size:1.2em;" href="">Emergency</a></li> 
+		<li class="navbar-item "><a class="nav-link text-light" style="font-size:1.2em;" href="index.html">Home</a></li>
+		<li class="navbar-item "><a class="nav-link text-light" style="font-size:1.2em;" href="">Login</a></li>
+		<li class="navbar-item "><a class="nav-link text-light" style="font-size:1.2em;" href="">Travel</a></li>
+		<li class="navbar-item "><a class="nav-link text-light" style="font-size:1.2em;" href="">Emergency</a></li> 
 	</ul></div>
 	</nav>
 </div>	
@@ -72,11 +95,11 @@
 				<h2>Recommendations for you</h2>
                 <ul class="nav nav-tabs">
                     <li class="nav-item ">
-                      <a class="nav-link " href="#beaches"
+                      <a class="nav-link active" href="#beaches"
                         role="tab" data-toggle="tab"><span style="font-size:1.2em">Beaches</span></a>
                     </li>
                     <li class="nav-item ">
-                      <a class="nav-link " href="#resorts" role="tab"
+                      <a class="nav-link " color="black" href="#resorts" role="tab"
                         data-toggle="tab"><span style="font-size:1.2em">Resorts</span></a>
                     </li>
                     <li class="nav-item ">
@@ -92,11 +115,11 @@
                     </div>
                     <div role="tabpanel" class="tab-pane fade" id="resorts">
                         <h2>Resorts</h2>
-                       <!--  <div id="resorts-set" class="container-fluid"></div> -->
+                        <div id="resorts-set" class="container-fluid"></div>
                     </div>
                     <div role="tabpanel" class="tab-pane fade" id="churches">
                         <h2>Churches</h2>
-                        <!-- <div id="churches-set" class="container-fluid"></div> -->
+                        <div id="churches-set" class="container-fluid"></div>
                     </div>
                 </div>
             </div>    
