@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>OOPS-Project</title>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<script src='https://kit.fontawesome.com/a076d05399.js'></script>
+
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+	<meta charset="utf-8">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+
+	</script>
+
+	<script>
+	$(document).ready(function()
+	{
+		var beachSet=[["Calangute Beach","./beaches/calangute.jpg"],["Baga Beach","./beaches/baga.jpeg"],["Candolim Beach","./beaches/candolim.jpeg"],["Palolem Beach","./beaches/palolem.jpg"]];
+		var resortSet=[["./resorts/novotel.jpg"],["./resorts/W-Goa.jpg"],["./resorts/resort-rio.jpg"],["./resorts/the-baga-beach-resort.jpg"]];
+		var churchSet=[["./churches/Se-Cathedral.jpg"],["./churches/São-Pedro-Church.jpg"],["./churches/Churches-and-convents-of-Goa.jpg"]];
+
+		for(int i=0;i<beachSet.length;i++)
+		{
+			var txt= '<div class="media"><img class="d-flex mr-3 img-thumbnail align-self-center" src='+beachSet[i][1]+'><div class="media-body"><h2 class="mt-0">'+beachSet[i][1]+'</h2><h4>Popular For</h4> <p class="d-none d-sm-block"></p></div></div>';
+			document.getElementById("beaches-set").innerHtml+=txt;
+		}
+	}
+
+	</script>
+
+	<style>
+		a {
+			color: white;
+		}
+	</style> 
+
+
+</head>
+<body>
+
+<div class="container bg-dark" style="z-index: 0;">
+	<nav class="navbar navbar-expand-sm fixed-top bg-dark">
+	<button class="navbar-toggler" data-toggle="collapse" data-target="#header"><span class="navbar-toggler-icon bg-light">=</span></button>
+	<a class="navbar-brand text-light" href="index.html"><span style="font-size:1.8em; ">Project title</span></a>
+	<div class="collapse navbar-collapse"  id="header">
+	<ul class="navbar-nav ml-auto list-unstyled">
+		<li class="navbar-item text-light"><a class="nav-link " style="font-size:1.2em;" href="index.html">Home</a></li>
+		<li class="navbar-item text-light"><a class="nav-link " style="font-size:1.2em;" href="">Login</a></li>
+		<li class="navbar-item text-light"><a class="nav-link " style="font-size:1.2em;" href="">Travel</a></li>
+		<li class="navbar-item text-light"><a class="nav-link " style="font-size:1.2em;" href="">Emergency</a></li> 
+	</ul></div>
+	</nav>
+</div>	
+
+<div class="container bg-dark" style="visibility: hidden;">
+	<nav class="navbar navbar-expand-sm fixed-top bg-dark">
+	<button class="navbar-toggler" data-toggle="collapse" data-target="#header"><span class="navbar-toggler-icon"></span></button>
+	<a class="navbar-brand text-light" href="index.html">title</a>
+	<div class="collapse navbar-collapse"  id="header">
+	<ul class="navbar-nav ml-auto list-unstyled" >
+		<li class="navbar-item"><a class="nav-link text-light" href="index.html">Home</a></li>
+		<li class="navbar-item"><a class="nav-link text-light" href="">Login</a></li>
+		<li class="navbar-item"><a class="nav-link text-light" href="">Travel</a></li>
+		<li class="navbar-item"><a class="nav-link text-light"  href="">Emergency</a></li> 
+	</ul></div>
+	</nav>
+</div>
+
+
+<br><br><br><br>
+
+			<div class="container">
+				<h2>Recommendations for you</h2>
+                <ul class="nav nav-tabs">
+                    <li class="nav-item ">
+                      <a class="nav-link " href="#beaches"
+                        role="tab" data-toggle="tab"><span style="font-size:1.2em">Beaches</span></a>
+                    </li>
+                    <li class="nav-item ">
+                      <a class="nav-link " href="#resorts" role="tab"
+                        data-toggle="tab"><span style="font-size:1.2em">Resorts</span></a>
+                    </li>
+                    <li class="nav-item ">
+                      <a class="nav-link " href="#churches" role="tab"
+                        data-toggle="tab"><span style="font-size:1.2em">Churches</span></a>
+                    </li>
+                </ul>
+
+                <div class="tab-content">
+    				 <div role="tabpanel" class="tab-pane fade show active" id="beaches">
+                        <h2>Beaches</h2>
+                        <div id="beaches-set" class="container-fluid"></div>
+                    </div>
+                    <div role="tabpanel" class="tab-pane fade" id="resorts">
+                        <h2>Resorts</h2>
+                       <!--  <div id="resorts-set" class="container-fluid"></div> -->
+                    </div>
+                    <div role="tabpanel" class="tab-pane fade" id="churches">
+                        <h2>Churches</h2>
+                        <!-- <div id="churches-set" class="container-fluid"></div> -->
+                    </div>
+                </div>
+            </div>    
+
+
+
+
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+</body>
+</html>
